@@ -15,3 +15,11 @@
 
 # Архивация исходных файлов.
 
+archive_name="old_files_$(date +%Y-%m-%d).tar.gz"
+
+tar -czf "$target_directory/$archive_name" "$source_directory"/*."$file_extension"
+
+rm -f "$source_directory"/*."$file_extension"
+
+echo "Archive created: $target_directory/$archive_name"
+echo "Source files deleted"
