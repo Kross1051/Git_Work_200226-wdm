@@ -6,6 +6,9 @@
 
 # Запросить новое расширение для файлов.
 
+echo "Enter new file extension:"
+read new_file_extension
+
 # Проверка существования исходной директории и целевой директории
 if [ ! -d "$source_directory" ]; then
     echo "Ошибка: исходная директория не существует"
